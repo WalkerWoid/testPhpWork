@@ -1,0 +1,29 @@
+{
+    "name": "felix/study-project",
+    "description": "Тестовое задание",
+    "type": "project",
+    "license": "proprietary",
+    "autoload": {
+        "psr-4": {
+            "Felix\\StudyProject\\": "lib/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Felix Antufiev",
+            "email": "FNAntufev@1cbit.ru"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^8.2",
+        "ext-sqlite3": "*",
+        "symfony/console": "6.3.x-dev"
+    },
+    "scripts": {
+        "database-init": [
+            "Felix\\StudyProject\\Commands\\DatabaseInitCommand"
+        ],
+        "dev-server": "env php -S localhost:8080 -t www www/index.php"
+    }
+}
