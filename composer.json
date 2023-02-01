@@ -18,12 +18,14 @@
     "require": {
         "php": "^8.2",
         "ext-sqlite3": "*",
-        "symfony/console": "6.3.x-dev"
+        "symfony/console": "6.3.x-dev",
+        "ext-json": "*",
+        "ext-sqlite": "*"
     },
     "scripts": {
         "database-init": [
             "Felix\\StudyProject\\Commands\\DatabaseInitCommand"
         ],
-        "dev-server": "env php -S localhost:8080 -t www www/index.php"
+        "dev-server": "php -S localhost:8080 -t www www/index.php"
     }
 }
